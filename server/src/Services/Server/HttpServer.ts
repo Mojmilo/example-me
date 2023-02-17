@@ -26,9 +26,14 @@ class HttpServer
         return HttpServer.instance;
     }
 
-    public getApp(): express.Application
+    public static getApp(): express.Application
     {
         return HttpServer.app;
+    }
+
+    public static getIo(): Server
+    {
+        return HttpServer.io;
     }
 }
 

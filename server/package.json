@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/App/app.js",
-    "dev": "nodemon src/App/app.js",
+    "start": "node dist/App/app.js",
+    "dev": "nodemon dist/App/app.js",
     "build": "tsc",
     "build:watch": "tsc -w"
   },
