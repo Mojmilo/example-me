@@ -3,7 +3,7 @@ import { HttpServer } from "../Server/HttpServer";
 class UserController
 {
     private static instance: UserController;
-    private static app = HttpServer.getInstance().getApp()
+    private static app = HttpServer.getApp()
 
     public static getInstance(): UserController
     {

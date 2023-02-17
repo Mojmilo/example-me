@@ -3,7 +3,7 @@ import { HttpServer } from "../Server/HttpServer";
 class BaseController
 {
     private static instance: BaseController;
-    private static app = HttpServer.getInstance().getApp()
+    private static app = HttpServer.getApp()
 
     public static getInstance(): BaseController
     {
