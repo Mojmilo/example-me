@@ -3,7 +3,7 @@ import { HttpServer } from "./HttpServer";
 class WebSocketServer
 {
     private static instance: WebSocketServer;
-    private static io = HttpServer.getIo();
+    private static io = HttpServer.getInstance().getIo();
 
     private constructor() {}
 

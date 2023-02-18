@@ -20,18 +20,20 @@ class HttpServer
         if (!HttpServer.instance)
         {
             HttpServer.instance = new HttpServer();
+            HttpServer.app.use(express.json());
+            HttpServer.app.use(express.urlencoded({ extended: true }));
             HttpServer.httpServer.listen(3000, () => console.log('Server is running on port 3000'));
         }
 
         return HttpServer.instance;
     }
 
-    public static getApp(): express.Application
+    public getApp(): express.Application
     {
         return HttpServer.app;
     }
 
-    public static getIo(): Server
+    public getIo(): Server
     {
         return HttpServer.io;
     }
